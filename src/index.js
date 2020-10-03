@@ -16,6 +16,13 @@ exports.max = function max (array) {
   // проверяем на пустой массив и параметры
   if (arguments.length === 0 || array.length === 0) {
     return 0; }
+    // cоздаем перем max и присваиваем первое значение массива
+    let max = array[0];
+    // делаем цикл по элементам массива - сравниваем переменную max со 
+    //след элементом массива если тот больше то max присваиваем нов значение
+    for (let i = 1; i < array.length; i++) {if (array[i] > max) {max = array[i];}}
+    // возвращаем максимальное значение
+    return max;
 }
 
 exports.avg = function avg (array) {
