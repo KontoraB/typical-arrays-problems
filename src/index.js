@@ -29,4 +29,10 @@ exports.avg = function avg (array) {
   // проверяем на пустой массив и параметры
   if (arguments.length === 0 || array.length === 0) {
     return 0; }
+    // cоздаем перем total (итог) и обнуляем его
+    let total = 0;
+    // делаем цикл по элементам массива - добавлям в итог значение след элемента массива 
+    for (let i = 0; i < array.length; i++) {total = total + array[i]; }
+    // возвращаем среднее значение = итог / длина массива
+    return total / array.length;
 }
